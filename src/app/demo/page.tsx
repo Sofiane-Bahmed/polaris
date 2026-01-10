@@ -23,7 +23,7 @@ export default function DemoPage() {
     }
 
     return (
-        <div className="p-8 space-x-4 " >
+        <div className="p-8 space-x-4">
             <Button
                 disabled={loading}
                 onClick={handleBlocking}

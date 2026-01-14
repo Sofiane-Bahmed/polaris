@@ -3,10 +3,7 @@
 import { ReactNode } from 'react';
 import {
     ClerkProvider,
-    SignInButton,
-    SignUpButton,
     useAuth,
-    UserButton
 } from '@clerk/nextjs'
 import {
     Authenticated,
@@ -32,7 +29,6 @@ export const Providers = ({ children }: { children: ReactNode }) => {
                     disableTransitionOnChange
                 >
                     <Authenticated>
-                        <UserButton />
                         {children}
                     </Authenticated>
                     <Unauthenticated>

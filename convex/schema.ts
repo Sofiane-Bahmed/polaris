@@ -13,7 +13,7 @@ export default defineSchema({
                 v.literal("failed"),
             ),
         ),
-        exportSatus: v.optional(
+        exportStatus: v.optional(
             v.union(
                 v.literal("exporting"),
                 v.literal("completed"),

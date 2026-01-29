@@ -5,7 +5,6 @@ import { css } from "@codemirror/lang-css";
 import { json } from "@codemirror/lang-json";
 import { markdown } from "@codemirror/lang-markdown";
 import { python } from "@codemirror/lang-python";
-import { jsx } from "react/jsx-runtime";
 
 export const getLanguageExtension = (filename: string,): Extension => {
     const ext = filename.split(".").pop()?.toLocaleLowerCase();

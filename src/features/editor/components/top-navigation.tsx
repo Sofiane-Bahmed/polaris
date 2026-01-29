@@ -91,7 +91,7 @@ export const TopNavigation = ({
     const { openTabs, } = useEditor(projectId);
 
     return (
-        <ScrollArea className="flex-1">
+        <ScrollArea className="flex-1 w-full">
             <nav className="bg-sidebar flex items-center h-8.75 border-b">
                 {openTabs.map((fileId, index) => (
                     <Tab

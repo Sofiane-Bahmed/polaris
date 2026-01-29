@@ -7,12 +7,15 @@ import {
 import { EditorView, keymap } from "@codemirror/view"
 import { oneDark } from "@codemirror/theme-one-dark"
 import { indentWithTab } from "@codemirror/commands"
+import { indentationMarkers } from "@replit/codemirror-indentation-markers"
 
 import { customTheme } from "../extentions/theme"
 import { getLanguageExtension } from "../extentions/language-extention"
 import { minimap } from "../extentions/minimap"
-import { indentationMarkers } from "@replit/codemirror-indentation-markers"
 import { customSetup } from "../extentions/custom-setup"
+import { suggestion } from "../extentions/suggestion"
+import { quickEdit } from "../extentions/quick-edit"
+import { selectionTooltip } from "../extentions/selection-tooltip"
 
 interface Props {
     fileName: string;
@@ -44,6 +47,9 @@ export const CodeEditor = ({
                 oneDark,
                 customTheme,
                 languageExtension,
+                suggestion(fileName),
+                quickEdit(fileName),
+                selectionTooltip(),
                 keymap.of([indentWithTab]),
                 minimap(),
                 indentationMarkers(),
@@ -67,7 +73,5 @@ export const CodeEditor = ({
 
     return (
         <div ref={editorRef} className="size-full pl-4 bg-background" />
-
-
     )
 }

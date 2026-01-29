@@ -22,10 +22,12 @@ export const ProjectIdLayout = ({
     return (
         <div className="w-full h-screen flex flex-col">
             <Navbar projectId={projectId} />
-            <div className="flex-1 flex overflow-hidden">
+            <div className="flex flex-1 overflow-hidden">
                 <Allotment
                     className="flex-1"
-                    defaultSizes={[DEFFAULT_CONVERSATION_SIDEBAR_WIDTH, DEFAULT_MAIN_SIZE]}
+                    defaultSizes={[
+                        DEFFAULT_CONVERSATION_SIDEBAR_WIDTH,
+                        DEFAULT_MAIN_SIZE]}
                 >
                     <Allotment.Pane
                         snap

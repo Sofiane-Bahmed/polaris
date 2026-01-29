@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 
 import { useEditor } from "../hooks/use-editor"
@@ -24,6 +24,15 @@ export const EditorView = ({
 
     const isActiveFileBinary = activeFile && activeFile.storageId;
     const isActiveFileText = activeFile && !activeFile.storageId;
+
+    //clean up pending debounced updates on unmpount or file changed 
+    useEffect(() => {
+        return () => {
+            if (timeOutRef.current) {
+                clearTimeout(timeOutRef.current);
+            }
+        }
+    }, [activeTabId]);
 
     return (
         <div className="h-full flex flex-col">

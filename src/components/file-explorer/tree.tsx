@@ -131,6 +131,7 @@ export const Tree = (
     };
 
     const folderName = item.name
+    
     const folderRender = (
         <>
             <div className="flex items-center gap-0.5">

@@ -98,10 +98,10 @@ export const useWebContainer = ({
 
                 //Parse install command (default:npm install)
                 const installCmd = settings?.installCommand || "npm install";
-                const [installBin, ...instalArgs] = installCmd.split(" ");
+                const [installBin, ...installArgs] = installCmd.split(" ");
                 appendOutput(`$ ${installCmd}\n`);
 
-                const installProcess = await container.spawn(installBin, instalArgs);
+                const installProcess = await container.spawn(installBin, installArgs);
                 installProcess.output.pipeTo(
                     new WritableStream({
                         write(data) {

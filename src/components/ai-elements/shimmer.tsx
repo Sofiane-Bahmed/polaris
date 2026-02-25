@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/static-components */
 "use client";
 
 import { cn } from "@/lib/utils";

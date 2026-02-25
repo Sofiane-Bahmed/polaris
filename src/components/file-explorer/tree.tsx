@@ -37,8 +37,8 @@ export const Tree = (
     const [creating, setCreating] = useState<"file" | "folder" | null>(null);
 
     const createFile = useCreateFile();
-    const renameFile = useRenameFile();
-    const deleteFile = useDeleteFile();
+    const renameFile = useRenameFile({ projectId, parentId: item.parentId });
+    const deleteFile = useDeleteFile({ projectId, parentId: item.parentId });
     const createFolder = useCreateFolder();
 
     const {
@@ -131,7 +131,7 @@ export const Tree = (
     };
 
     const folderName = item.name
-    
+
     const folderRender = (
         <>
             <div className="flex items-center gap-0.5">

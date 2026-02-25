@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
+import { AlertTriangleIcon } from "lucide-react"
 
 import { useEditor } from "../hooks/use-editor"
 import { FileBreadcrumbs } from "./file-breadcrumbs"
@@ -69,7 +70,14 @@ export const EditorView = ({
                     />
                 )}
                 {isActiveFileBinary && (
-                    <>TODO: implement binary preview</>
+                    <div className="size-full flex items-center justify-center">
+                        <div className="flex flex-col items-center gap-2.5 max-w-md text-center">
+                            <AlertTriangleIcon className="size-10 text-yellow-500" />
+                            <p className="text-sm">
+                                The file is not displayed in the text editor because it is either binary or uses an unsupported text encoding
+                            </p>
+                        </div>
+                    </div>
                 )}
             </div>
         </div>

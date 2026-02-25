@@ -1,3 +1,6 @@
+// eslint-disable-next-line react-hooks/refs */
+// eslint-disable-next-line react-hooks/set-state-in-effect */
+// eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import {
@@ -770,7 +773,7 @@ export const PromptInput = ({
         ref={formRef}
         {...props}
       >
-        <InputGroup className="overflow-hidden">{children}</InputGroup>
+        <InputGroup className="overflow-hidden rounded-lg!">{children}</InputGroup>
       </form>
     </>
   );

@@ -54,7 +54,7 @@ Polaris is a cutting-edge, AI-first code editor and development environment that
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/polaris.git
+   git clone https://github.com/Sofiane-Bahmed/polaris.git
    cd polaris
    ```
 
